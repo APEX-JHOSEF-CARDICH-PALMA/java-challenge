@@ -161,4 +161,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+
+.classpath
+.project
+
 # End of https://www.toptal.com/developers/gitignore/api/intellij,java,macos
