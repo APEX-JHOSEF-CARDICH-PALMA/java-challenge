@@ -77,7 +77,7 @@ public class Customer implements  Person {
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "\nCustomer{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", id='" + id + '\'' +

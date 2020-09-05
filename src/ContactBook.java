@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ContactBook {
 private ArrayList<Customer> customerList;
@@ -9,7 +10,7 @@ private ArrayList<Customer> customerList;
     }
 
 
-    public ArrayList<Customer> getCustomerList() {
+    private ArrayList<Customer> getCustomerList() {
         return customerList;
     }
 
@@ -32,7 +33,24 @@ private ArrayList<Customer> customerList;
             if(contact.getName().equals(name))
                 results.add(contact);
         }
+        System.out.println(" Results of the search: ");
+        for (Customer contact: results
+             ) {
+            contact.toString();
+            
+        }
         return results;
     }
 
+    public ArrayList<Customer> orderByName(){
+        Collections.sort(this.getCustomerList(), new SortByName());
+        return this.getCustomerList();
+    }
+
+    @Override
+    public String toString() {
+        return "ContactBook{" +
+                "customerList=" + customerList +
+                '}';
+    }
 }
