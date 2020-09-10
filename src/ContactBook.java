@@ -32,6 +32,7 @@ private ArrayList<Customer> customerList;
         for (Customer contact : this.getCustomerList()){
             if(contact.getName().equals(name))
                 results.add(contact);
+
         }
         System.out.println(" Results of the search: ");
         for (Customer contact: results

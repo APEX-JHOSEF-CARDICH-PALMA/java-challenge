@@ -2,7 +2,7 @@ public class Challenge {
 
     public static void main (String args[]){
 
-        System.out.println(palindromo("radar"));
+           System.out.println(hola("radar"));
 
     }
 
@@ -10,23 +10,24 @@ public class Challenge {
     public static boolean palindromo(String word){
         boolean resp =true;
 
-        String[] str = new String[word.length()];
+        char[] str = new char[word.length()];
         int j = 0;
         for (int i = word.length(); i == 0; i--){
-            str[j] = String.valueOf(word.charAt(i));
+            str[j] = word.charAt(i);
             j++;
         }
         for(int i =word.length(); i<=0;i--){
 
-            if(str[i]!=String.valueOf(word.charAt(i))){
+            if(str[i] == word.charAt(i)){
             resp = false;
             }
         }
 
-
-
-
-
         return resp;
     }
+public static  String hola (String hola){
+    boolean resp = palindromo(hola);
+
+    return resp ? "Es Palindromo" : "NO Es Palindromo";
+}
 }
